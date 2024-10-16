@@ -13,9 +13,28 @@
           <p>To Do</p>
           <p>...</p>
         </div>
-        <div class="box-content" id="todo">
-          <p onclick="editTask(this)">Task 1</p>
-          <p onclick="editTask(this)">Task 2</p>
+        <div
+          class="box-content"
+          id="todo"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        >
+          <p
+            id="task1"
+            draggable="true"
+            ondragstart="drag(event)"
+            onclick="editTask(this)"
+          >
+            Task 1
+          </p>
+          <p
+            id="task2"
+            draggable="true"
+            ondragstart="drag(event)"
+            onclick="editTask(this)"
+          >
+            Task 2
+          </p>
         </div>
         <div class="box-footer">
           <button onclick="addCard('todo')">+ Add a card</button>
@@ -27,9 +46,28 @@
           <p>Doing</p>
           <p>...</p>
         </div>
-        <div class="box-content" id="doing">
-          <p onclick="editTask(this)">Task 1</p>
-          <p onclick="editTask(this)">Task 2</p>
+        <div
+          class="box-content"
+          id="doing"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        >
+          <p
+            id="task3"
+            draggable="true"
+            ondragstart="drag(event)"
+            onclick="editTask(this)"
+          >
+            Task 1
+          </p>
+          <p
+            id="task4"
+            draggable="true"
+            ondragstart="drag(event)"
+            onclick="editTask(this)"
+          >
+            Task 2
+          </p>
         </div>
         <div class="box-footer">
           <button onclick="addCard('doing')">+ Add a card</button>
@@ -41,9 +79,28 @@
           <p>Done</p>
           <p>...</p>
         </div>
-        <div class="box-content" id="done">
-          <p onclick="editTask(this)">Task 1</p>
-          <p onclick="editTask(this)">Task 2</p>
+        <div
+          class="box-content"
+          id="done"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        >
+          <p
+            id="task5"
+            draggable="true"
+            ondragstart="drag(event)"
+            onclick="editTask(this)"
+          >
+            Task 1
+          </p>
+          <p
+            id="task6"
+            draggable="true"
+            ondragstart="drag(event)"
+            onclick="editTask(this)"
+          >
+            Task 2
+          </p>
         </div>
         <div class="box-footer">
           <button onclick="addCard('done')">+ Add a card</button>
