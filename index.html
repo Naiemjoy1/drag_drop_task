@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Task Board</title>
+  </head>
+  <body>
+    <main class="main-box">
+      <div class="task-box">
+        <div class="box-header">
+          <p>To Do</p>
+          <p>...</p>
+        </div>
+        <div class="box-content" id="todo">
+          <p onclick="editTask(this)">Task 1</p>
+          <p onclick="editTask(this)">Task 2</p>
+        </div>
+        <div class="box-footer">
+          <button onclick="addCard('todo')">+ Add a card</button>
+        </div>
+      </div>
+
+      <div class="task-box">
+        <div class="box-header">
+          <p>Doing</p>
+          <p>...</p>
+        </div>
+        <div class="box-content" id="doing">
+          <p onclick="editTask(this)">Task 1</p>
+          <p onclick="editTask(this)">Task 2</p>
+        </div>
+        <div class="box-footer">
+          <button onclick="addCard('doing')">+ Add a card</button>
+        </div>
+      </div>
+
+      <div class="task-box">
+        <div class="box-header">
+          <p>Done</p>
+          <p>...</p>
+        </div>
+        <div class="box-content" id="done">
+          <p onclick="editTask(this)">Task 1</p>
+          <p onclick="editTask(this)">Task 2</p>
+        </div>
+        <div class="box-footer">
+          <button onclick="addCard('done')">+ Add a card</button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
