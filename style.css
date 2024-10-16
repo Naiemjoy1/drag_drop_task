@@ -6,35 +6,41 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .task-box {
   background-color: #f1f2f4;
   width: 50%;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  /* padding-top: 10px; */
+  padding: 20px;
   border-radius: 20px;
 }
+
 .box-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  /* align-items: flex-start; */
-  /* padding-left: 10px; */
-  /* align-content: flex-start; */
 }
+
 .box-content {
-  /* display: flex; */
-  /* flex-direction: column; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 200px;
+  padding-bottom: 20px;
 }
+
 .box-content p {
   background-color: white;
   padding: 10px;
   border-radius: 10px;
+  margin: 0;
 }
+
 .box-footer {
   display: flex;
   padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 20px;
+  justify-content: space-between;
 }
 
 .add-taskbox {
@@ -45,4 +51,49 @@
   background-color: #f1f2f4;
   padding: 10px;
   border-radius: 10px;
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-image:hover::before {
+  opacity: 1;
+}
+
+.rotate-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 2;
 }

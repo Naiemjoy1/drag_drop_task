@@ -1,4 +1,4 @@
-let taskIdCounter = 7;
+let taskIdCounter = 10;
 
 function addCard(boxId) {
   const task = prompt("Enter the new task");
@@ -46,7 +46,33 @@ function drop(event) {
 
   if (event.target.classList.contains("box-content")) {
     event.target.appendChild(task);
-  } else if (event.target.parentElement.classList.contains("box-content")) {
-    event.target.parentElement.appendChild(task);
+  } else if (event.target.closest(".box-content")) {
+    event.target.closest(".box-content").appendChild(task);
   }
+}
+
+function rotateImage(taskId) {
+  const imageCard = document.getElementById(taskId);
+  if (!imageCard) {
+    console.error(`Task with ID ${taskId} not found.`);
+    return;
+  }
+
+  const imgElement = imageCard.querySelector("img");
+  if (!imgElement) {
+    console.error("Image element not found inside the task card.");
+    return;
+  }
+
+  let currentRotation = imgElement.getAttribute("data-rotation") || 0;
+
+  currentRotation = parseInt(currentRotation, 10);
+
+  let newRotation = currentRotation + 90;
+
+  imgElement.style.transform = `rotate(${newRotation}deg)`;
+
+  imgElement.setAttribute("data-rotation", newRotation);
+
+  console.log(`Rotated to: ${newRotation} degrees`);
 }

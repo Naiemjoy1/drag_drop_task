@@ -19,8 +19,24 @@
           ondrop="drop(event)"
           ondragover="allowDrop(event)"
         >
-          <p
+          <div
             id="task1"
+            draggable="true"
+            ondragstart="drag(event)"
+            class="card-image"
+          >
+            <img
+              src="./Images/blob (2).jpg"
+              alt="Task 1 Image"
+              draggable="false"
+            />
+            <button class="rotate-btn" onclick="rotateImage('task1')">
+              Rotate
+            </button>
+          </div>
+
+          <p
+            id="task2"
             draggable="true"
             ondragstart="drag(event)"
             onclick="editTask(this)"
@@ -28,7 +44,7 @@
             To Do Task 1
           </p>
           <p
-            id="task2"
+            id="task3"
             draggable="true"
             ondragstart="drag(event)"
             onclick="editTask(this)"
@@ -52,8 +68,23 @@
           ondrop="drop(event)"
           ondragover="allowDrop(event)"
         >
+          <div
+            id="task4"
+            draggable="true"
+            ondragstart="drag(event)"
+            class="card-image"
+          >
+            <img
+              draggable="false"
+              src="./Images/blob (7).jpg"
+              alt="Task 2 Image"
+            />
+            <button class="rotate-btn" onclick="rotateImage('task4')">
+              Rotate
+            </button>
+          </div>
           <p
-            id="task3"
+            id="task5"
             draggable="true"
             ondragstart="drag(event)"
             onclick="editTask(this)"
@@ -61,7 +92,7 @@
             Doing Task 1
           </p>
           <p
-            id="task4"
+            id="task6"
             draggable="true"
             ondragstart="drag(event)"
             onclick="editTask(this)"
@@ -85,8 +116,24 @@
           ondrop="drop(event)"
           ondragover="allowDrop(event)"
         >
+          <div
+            id="task7"
+            draggable="true"
+            ondragstart="drag(event)"
+            class="card-image"
+          >
+            <img
+              draggable="false"
+              src="./Images/blob (8).jpg"
+              alt="Task 1 Image"
+            />
+            <button class="rotate-btn" onclick="rotateImage('task6')">
+              Rotate
+            </button>
+          </div>
+
           <p
-            id="task5"
+            id="task8"
             draggable="true"
             ondragstart="drag(event)"
             onclick="editTask(this)"
@@ -94,7 +141,7 @@
             Done Task 1
           </p>
           <p
-            id="task6"
+            id="task9"
             draggable="true"
             ondragstart="drag(event)"
             onclick="editTask(this)"
