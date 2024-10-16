@@ -4,6 +4,7 @@ function addCard(boxId) {
     const boxContent = document.getElementById(boxId);
     const newTask = document.createElement("p");
     newTask.textContent = task;
+    newTask.setAttribute("onclick", "editTask(this)");
     boxContent.appendChild(newTask);
   }
 }
