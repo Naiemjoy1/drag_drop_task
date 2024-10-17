@@ -81,7 +81,7 @@ function rotateImage(taskId) {
 
   Swal.fire({
     position: "top-end",
-    icon: "success",
+    icon: "info",
     title: `Image rotated to ${newRotation} degrees`,
     showConfirmButton: false,
     timer: 1500,
