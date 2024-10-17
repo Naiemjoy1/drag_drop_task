@@ -12,6 +12,13 @@ function addCard(boxId) {
     newTask.setAttribute("onclick", "editTask(this)");
     boxContent.appendChild(newTask);
     taskIdCounter++;
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: `Task "${task}" added successfully`,
+      showConfirmButton: false,
+      timer: 1500,
+    });
   }
 }
 
@@ -49,6 +56,14 @@ function drop(event) {
   } else if (event.target.closest(".box-content")) {
     event.target.closest(".box-content").appendChild(task);
   }
+
+  Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: `Task "${task.textContent}" moved successfully`,
+    showConfirmButton: false,
+    timer: 1500,
+  });
 }
 
 function rotateImage(taskId) {
@@ -64,5 +79,11 @@ function rotateImage(taskId) {
 
   imgElement.setAttribute("data-rotation", newRotation);
 
-  console.log(`Rotated to: ${newRotation} degrees`);
+  Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: `Image rotated to ${newRotation} degrees`,
+    showConfirmButton: false,
+    timer: 1500,
+  });
 }
