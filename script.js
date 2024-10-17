@@ -53,17 +53,7 @@ function drop(event) {
 
 function rotateImage(taskId) {
   const imageCard = document.getElementById(taskId);
-  if (!imageCard) {
-    console.error(`Task with ID ${taskId} not found.`);
-    return;
-  }
-
   const imgElement = imageCard.querySelector("img");
-  if (!imgElement) {
-    console.error("Image element not found inside the task card.");
-    return;
-  }
-
   let currentRotation = imgElement.getAttribute("data-rotation") || 0;
 
   currentRotation = parseInt(currentRotation, 10);
